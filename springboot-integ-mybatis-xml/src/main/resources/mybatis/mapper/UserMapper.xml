@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lm.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="com.lm.entity.UserEntity">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="userName" property="userName" jdbcType="VARCHAR" />
+		<result column="nickName" property="nickName" jdbcType="VARCHAR" />
+		<result column="passWord" property="passWord" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="regTime" property="regTime" jdbcType="DATE" />
+		<result column="sex" property="sexEnums" javaType="com.lm.enums.SexEnums" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, userName, nickName,passWord, email,regTime,sex
+	</sql>
+
+	<select id="getAll" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM user
+	</select>
+
+	<select id="getUserById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM user
+		WHERE id = #{id}
+	</select>
+
+	<insert id="insert" parameterType="com.lm.entity.UserEntity">
+		INSERT INTO
+		user
+		(userName, nickName,passWord, email,regTime,sex)
+		VALUES
+		(#{userName},#{nickName}, #{passWord},#{email}, #{regTime},#{sexEnums})
+	</insert>
+
+	<update id="update" parameterType="com.lm.entity.UserEntity">
+		UPDATE
+		user
+		SET
+		<if test="userName != null">userName = #{userName},</if>
+		<if test="passWord != null">passWord = #{passWord}</if>
+		WHERE
+		id = #{id}
+	</update>
+
+	<delete id="delete" parameterType="java.lang.Long">
+		DELETE FROM
+		user
+		WHERE
+		id =#{id}
+	</delete>
+
+</mapper>
