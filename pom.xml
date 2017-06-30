@@ -20,6 +20,9 @@
 
 	<modules>
 		<module>springboot-integ-mybatis-xml</module>
+		<module>springboot-integ-mybatis-xml-mdsource</module>
+		<module>springboot-integ-mybatis-annotation</module>
+		<module>springboot-integ-mybatis-annotation-mdsource</module>
 	</modules>
 
 	<build>
