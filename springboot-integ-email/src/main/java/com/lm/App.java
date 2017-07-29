@@ -4,13 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 应用启动
+ * springboot入口
  * 
  * @author liangming.deng
- * @date 2017年6月20日
+ * @date 2017年7月29日
  *
  */
-
 @SpringBootApplication
 public class App {
 
