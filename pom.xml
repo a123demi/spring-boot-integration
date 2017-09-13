@@ -23,7 +23,9 @@
 		<module>springboot-integ-mybatis-xml-mdsource</module>
 		<module>springboot-integ-mybatis-annotation</module>
 		<module>springboot-integ-mybatis-annotation-mdsource</module>
-    <module>springboot-integ-email</module>
+		<module>springboot-integ-email</module>
+ 
+	 	<module>springboot-integ-mongo</module>
   </modules>
 
 	<build>
