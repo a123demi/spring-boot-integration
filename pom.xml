@@ -26,6 +26,7 @@
 		<module>springboot-integ-email</module>
  
 	 	<module>springboot-integ-mongo</module>
+    <module>springboot-integ-mongo-mdsource</module>
   </modules>
 
 	<build>
