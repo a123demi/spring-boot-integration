@@ -32,7 +32,7 @@ import com.lm.util.Constant;
  */
 @RestController
 @RequestMapping(value = "/redis")
-public class CacheRedisController extends BaseResult {
+public class CacheRedisController extends BaseController {
 
 	@Autowired
 	private UserService userService;

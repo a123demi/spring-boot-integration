@@ -8,7 +8,7 @@ import org.springframework.ui.ModelMap;
  * @date   2017年11月17日
  *
  */
-public class BaseResult {
+public class BaseController {
 
 	/**
 	 * 接口返回通用规范

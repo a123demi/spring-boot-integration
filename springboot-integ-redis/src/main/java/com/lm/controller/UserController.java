@@ -28,7 +28,7 @@ import com.lm.util.Constant;
 @RestController
 @RequestMapping("/user")
 
-public class UserController extends BaseResult {
+public class UserController extends BaseController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
